@@ -28,14 +28,6 @@ def transform_data():
     save_filter_df = filter_df.to_parquet(f"{path_to_transform_dataset}/{dataset_transform_file}")
     return save_filter_df
 
-""" def upload_transform_data_to_gcs(bucket, object_name, local_file):
-    #upload to gcs bucket
-    client = storage.Client()
-    bucket = client.bucket(bucket)
-    blob = bucket.blob(object_name)
-    blob.upload_from_filename(local_file) """
-
-
 with DAG(
     dag_id="etl_local_to_gcs_to_bigquery",
     start_date=days_ago(1),
