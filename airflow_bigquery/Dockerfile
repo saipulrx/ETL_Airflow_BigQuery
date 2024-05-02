@@ -33,7 +33,6 @@ RUN DOWNLOAD_URL="https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/goo
 WORKDIR $AIRFLOW_HOME
 
 COPY scripts scripts
-COPY dataset dataset
 
 RUN chmod +x scripts
 
